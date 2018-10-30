@@ -26,7 +26,7 @@ public class Message extends DomainEntity {
 		this.moment = moment;
 	}
 
-	@Pattern(regexp = "HIGH|NEUTRAL|LOW$")
+	@Pattern(regexp = "^HIGH|NEUTRAL|LOW$")
 	public String getPriority() {
 		return this.priority;
 	}
