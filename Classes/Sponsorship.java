@@ -5,9 +5,9 @@ import org.hibernate.validator.constraints.URL;
 
 public class Sponsorship extends DomainEntity {
 
-	private String	bannerURL;
-	private String	pageURL;
-	private String	creditCard;
+	private String		bannerURL;
+	private String		pageURL;
+	private CreditCard	creditCard;
 
 
 	@URL
@@ -26,10 +26,10 @@ public class Sponsorship extends DomainEntity {
 		this.pageURL = pageURL;
 	}
 
-	public String getCreditCard() {
+	public CreditCard getCreditCard() {
 		return this.creditCard;
 	}
-	public void setCreditCard(final String creditCard) {
+	public void setCreditCard(final CreditCard creditCard) {
 		this.creditCard = creditCard;
 	}
 

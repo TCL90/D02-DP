@@ -17,6 +17,9 @@ public class Message extends DomainEntity {
 	private String	subject;
 	private boolean	flagSpam;
 
+	private Actor	sender;
+	private Actor	recipient;
+
 
 	@Past
 	public Date getMoment() {
@@ -63,6 +66,18 @@ public class Message extends DomainEntity {
 	}
 	public void setFlagSpam(final boolean flagSpam) {
 		this.flagSpam = flagSpam;
+	}
+	public Actor getSender() {
+		return sender;
+	}
+	public void setSender(Actor sender) {
+		this.sender = sender;
+	}
+	public Actor getRecipient() {
+		return recipient;
+	}
+	public void setRecipient(Actor recipient) {
+		this.recipient = recipient;
 	}
 
 }

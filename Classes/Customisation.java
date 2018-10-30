@@ -6,16 +6,16 @@ import org.hibernate.validator.constraints.URL;
 
 public class Customisation extends DomainEntity {
 
-	private String	systemName;
-	private String	bannerURL;
-	private String	welcomeMessage;
-	private String	spamWords;
-	private int		VATpercentage;
+	private String		systemName;
+	private String		bannerURL;
+	private String		welcomeMessage;
+	private String		spamWords;
+	private int			VATpercentage;
 	//no es opcional, si lo fuera -> Integer
-	private String	phoneNumberCountryCode;
-	private String	creditCard;
-	private String	positiveWords;
-	private String	negativeWords;
+	private String		phoneNumberCountryCode;
+	private CreditCard	creditCard;
+	private String		positiveWords;
+	private String		negativeWords;
 
 
 	@NotBlank
@@ -66,10 +66,10 @@ public class Customisation extends DomainEntity {
 	}
 
 	@NotBlank
-	public String getCreditCard() {
+	public CreditCard getCreditCard() {
 		return this.creditCard;
 	}
-	public void setCreditCard(final String creditCard) {
+	public void setCreditCard(final CreditCard creditCard) {
 		this.creditCard = creditCard;
 	}
 
